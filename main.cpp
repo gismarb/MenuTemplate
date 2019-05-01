@@ -26,7 +26,10 @@ int main() {
     MenuA.Title = "\n\t\tNeverwinter Nights Simple Menu";
 
     MenuA.Description = "Choose with UP and DOWN, select with RETURN!";
-    MenuA.setCursor("> ");
+    MenuA.setCursor("--> ");
+
+    // Prova P1 (4) - Fazendo uso do metodo setCursorSize (definindo o tamanho da string em funcao de getCursor)
+    MenuA.setCursorSize(MenuA.getCursor().length());
 
     MenuA.addEntry("GAME_NEW", "New game");
     MenuA.addEntry("GAME_LOAD", "Load save state");
@@ -47,4 +50,7 @@ int main() {
     
     // Prova P1 (3) - Fazendo uso metodo getCursor (mostrando qual foi o cursor utilizado)
     cout << "Cursor typed: " << MenuA.getCursor() << endl;
+    
+    // Prova P1 (4) - Fazendo uso do metodo getCursorSize (mostrando tamanho da string)
+    cout << "Cursor Size (number of characters): " << MenuA.getCursorSize() << endl;
 }

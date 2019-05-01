@@ -145,6 +145,14 @@ private:
     //!
     string Cursor = "> ";
 
+    // Prova P1 (4) - Definindo atributo CursorSize (tipo int, pois armazenará o tamanho da string)
+    //!
+    //! @brief      Cursor Size.
+    //!
+    //! Attribute that will represent the size of the String Cursor.
+    //!
+    int CursorSize;
+
     //!
     //! @brief      List of all menu entries.
     //!
@@ -364,5 +372,21 @@ private:
     //! Size is always a value from 0 to number of entries.
     //!
     int getNumberOfEntries();
+
+    // Prova P1 (4) - Definindo metodo (setCursorSize)
+    //!
+    //! @brief      Set Cursor Size.
+    //!
+    //! Sets the number of characters in the string.
+    //!
+    void setCursorSize(const int CursorSize);
+
+    // Prova P1 (4) - Definindo metodo (getCursorSize)
+    //!
+    //! @brief      Get Cursor Size.
+    //!
+    //! Gets the number of characters in the string.
+    //!
+    int getCursorSize();
 };
 } // end namespace

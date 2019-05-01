@@ -525,4 +525,13 @@ string MenuTemplate::getCursor() {
     return this->Cursor;
 }
 
+    // Prova P1 (4) - Implementando metodos CursorSize (setCursorSize e getCursorSize)
+    void MenuTemplate::setCursorSize(const int CursorSize) {
+        this->CursorSize = CursorSize;
+    }
+
+    int MenuTemplate::getCursorSize() {
+        return this->CursorSize;
+    }
+
 } // end namespace
