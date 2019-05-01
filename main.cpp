@@ -30,6 +30,12 @@ int main() {
     MenuA.addEntry("GAME_LOAD", "Load save state");
     MenuA.addEntry("GAME_EXIT", "Exit game");
     MenuA.addEntry("GAME_OPTIONS", "Game options");
+    
+    // Prova P1 (1) - Adcionando (Video Options, Sound Options, Controls)
+    MenuA.addEntry("GAME_VIDEO", "Video Options");
+    MenuA.addEntry("GAME_SOUND", "Sound Options");
+    MenuA.addEntry("GAME_CONTROLS", "Controls");
+
 
     MenuA.swapEntries(2, "GAME_OPTIONS");
 
