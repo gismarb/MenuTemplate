@@ -17,7 +17,7 @@ using std::vector;
 using std::string;
 
 // define LINUX or WINDOWS
-#define WINDOWS
+#define LINUX
 
 //!
 //! @namespace  MenuTemplate

@@ -13,7 +13,7 @@
 
 
 // define LINUX or WINDOWS
-#define WINDOWS
+#define LINUX
 
 
 #include <cstdint>
