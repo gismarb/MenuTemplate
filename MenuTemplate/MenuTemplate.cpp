@@ -518,4 +518,11 @@ int MenuTemplate::displayGetPosition() {
 int MenuTemplate::getNumberOfEntries() {
     return Entries.size();
 }
+
+// Prova P1 (2) - Adicionando rotina getCursor (para que possa ser usada no main.cpp)
+// Este metodo esta declarado na em MenuTemplate/MenuTemplate.hpp (linha 335)
+string MenuTemplate::getCursor() {
+    return this->Cursor;
+}
+
 } // end namespace

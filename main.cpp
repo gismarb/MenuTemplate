@@ -24,7 +24,7 @@ int main() {
 
     // Prova P1 (2) - Adicionando novo titulo (Neverwinter Nights Simple Menu)
     MenuA.Title = "\n\t\tNeverwinter Nights Simple Menu";
-    
+
     MenuA.Description = "Choose with UP and DOWN, select with RETURN!";
     MenuA.setCursor("> ");
 
@@ -44,4 +44,7 @@ int main() {
     MenuA.setCursorStartPosition(2);
 
     cout << MenuA.displayGetName() << endl;
+    
+    // Prova P1 (3) - Fazendo uso metodo getCursor (mostrando qual foi o cursor utilizado)
+    cout << "Cursor typed: " << MenuA.getCursor() << endl;
 }
