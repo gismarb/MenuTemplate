@@ -15,7 +15,7 @@ date +%H:%M:%S
 echo "  --> Iniciando a Instalacao do $nome_programa, aguarde..."
 echo
 
-sleep 10
+sleep 5
 g++ main.cpp MenuTemplate/MenuTemplate.cpp MenuTemplate/Entry.cpp MenuTemplate/ExternFunctions/getChar.cpp -o Menu 2> null
 
 date +%H:%M:%S
@@ -23,15 +23,14 @@ date +%H:%M:%S
 echo "  --> Finalizando a Instalacao. Sera criado o arquivo $nome_programa em: "
 pwd
 
-sleep 10
+sleep 5
 echo
 date +%H:%M:%S
 
 echo "  --> Para utilizar, inicialmente digite ./$nome_programa"
 echo
 #cleaning trash
-
-rm null
+#rm null
 read -p "Pressione qualquer tecla para sair do Instalador..."
 echo
 
