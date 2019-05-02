@@ -386,11 +386,17 @@ void MenuTemplate::swapEntries(const int &PositionA, const int &PositionB) {
     }
 }
 
-void MenuTemplate::setCursor(const string &Cursor) {
+// Prova P1 (5) - Alterando implementacao do metodo setCursor(para receber isUnicode)
+void MenuTemplate::setCursor(const string &Cursor, const bool isUnicode) {
     try {
         // Testing, if new Cursor equals old Cursor. If true: return.
         if(this->Cursor == Cursor)
             return;
+        // Prova P1 (5) - Testando para saber se é Unicode
+        if(isUnicode)
+            this->Cursor = Cursor;
+
+        cout << "Passei por aqui" << endl;
 
         // Testing, if cursor is emptry. If true: exception.
         if(Cursor.empty())

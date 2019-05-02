@@ -26,7 +26,9 @@ int main() {
     MenuA.Title = "\n\t\tNeverwinter Nights Simple Menu";
 
     MenuA.Description = "Choose with UP and DOWN, select with RETURN!";
-    MenuA.setCursor("--> ");
+    
+    // Prova P1 (5) - Alterando usando o metodo setCursor(para validar se é isUnicode)
+    MenuA.setCursor("\xe2\x98\xb9	", 1);
 
     // Prova P1 (4) - Fazendo uso do metodo setCursorSize (definindo o tamanho da string em funcao de getCursor)
     MenuA.setCursorSize(MenuA.getCursor().length());

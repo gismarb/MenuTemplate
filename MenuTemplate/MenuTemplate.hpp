@@ -317,11 +317,12 @@ private:
     //!
     //! @brief      Sets Cursor.
     //!
-    //! @param      String of Cursor.
+    //! @param      String of Cursor and validation of type (ASCII or UTF-8).
     //!
     //! If cursor is empty or contains only spaces, it will not be set.
     //!
-    void setCursor(const string &Cursor);
+    // Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
+    void setCursor(const string &Cursor, const bool isUnicode);
 
     //!
     //! @brief      Sets startposition of cursor.
