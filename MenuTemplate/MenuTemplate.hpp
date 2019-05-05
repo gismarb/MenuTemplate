@@ -137,6 +137,10 @@ private:
     //!
     int CursorStartPosition = 0;
 
+
+    bool TypeCursor;
+
+
     //!
     //! @brief      Cursor of menu.
     //!
@@ -314,6 +318,17 @@ private:
     //!
     void swapEntries(const int &PositionA, const int &PositionB);
 
+    // Prova P1 (5) - Criando metodo setValidHexCursor (para validar entradas hexadecimais)
+    //!
+    //! @brief      Sets Cursor.
+    //!
+    //! @param      String Cursor to be validated as Hexadecimal.
+    //!
+    //! According to the activity, it checks whether or not the string represents a hexadecimal (Bool type).
+    //!
+    // Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
+    void setValidHexCursor(const string &Cursor);
+
     //!
     //! @brief      Sets Cursor.
     //!
@@ -337,6 +352,12 @@ private:
     //! @brief      Returns actual cursor startposition.
     //!
     int getCursorStartPosition();
+
+    //!
+    //! @brief      Returns bool type (false or true) type of the Cursor (string content represents).
+    //!
+    // Prova P1 (5) - Criando metodo getValidHexCursor (para recuperar o retorno da validacao)
+    bool getValidHexCursor();
 
     //!
     //! @brief      Returns actual cursor as string.
@@ -381,7 +402,7 @@ private:
     //! Sets the number of characters in the string.
     //!
     void setCursorSize(const int CursorSize);
-
+    
     // Prova P1 (4) - Definindo metodo (getCursorSize)
     //!
     //! @brief      Get Cursor Size.

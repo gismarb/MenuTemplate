@@ -386,18 +386,18 @@ void MenuTemplate::swapEntries(const int &PositionA, const int &PositionB) {
     }
 }
 
+// Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
+void MenuTemplate::setValidHexCursor(const string &Cursor) {
+    if((Cursor[0] == '\xe2') && ((Cursor[1] == '\x98') || (Cursor[1] == '\x99'))) 
+        TypeCursor = true;
+    else
+        TypeCursor = false;
+}
+
 // Prova P1 (5) - Alterando implementacao do metodo setCursor(para receber isUnicode)
 void MenuTemplate::setCursor(const string &Cursor, const bool isUnicode) {
     try {
-        // Testing, if new Cursor equals old Cursor. If true: return.
-        if(this->Cursor == Cursor)
-            return;
-        // Prova P1 (5) - Testando para saber se é Unicode
-        if(isUnicode)
-            this->Cursor = Cursor;
-
-        cout << "Passei por aqui" << endl;
-
+ 
         // Testing, if cursor is emptry. If true: exception.
         if(Cursor.empty())
             throw string ("Cursor must not be empty!");
@@ -412,7 +412,25 @@ void MenuTemplate::setCursor(const string &Cursor, const bool isUnicode) {
         if(Counter == Cursor.length())
             throw string ("Cursor must not contain only spaces!");
 
+        // Prova P1 (5) - Testando para saber se é Unicode
+        // Usando Metodo setValidHexCursor (criado para checar a entrada do hexadecimal)
+        MenuTemplate::setValidHexCursor(Cursor);
+
+        // Usando o metodo getValidHexCursor, implementamos e verificamos os restornos, visando tratar excecoes
+        if((isUnicode) && (MenuTemplate::getValidHexCursor()))
+            this->Cursor = Cursor;
+
+        if((isUnicode) && (!MenuTemplate::getValidHexCursor()))
+            throw string ("Option to hexadecimal set, but is not hexadecimal");
+
+        if((!isUnicode) && (MenuTemplate::getValidHexCursor()))
+            throw string ("Option to hexadecimal not set, but is hexadecimal");
+        
         this->Cursor = Cursor;
+
+        // Testing, if new Cursor equals old Cursor. If true: return.
+        if(this->Cursor == Cursor)
+            return;
     }
     catch(string Exception) {
         cout << Exception << endl;
@@ -523,6 +541,12 @@ int MenuTemplate::displayGetPosition() {
 
 int MenuTemplate::getNumberOfEntries() {
     return Entries.size();
+}
+
+// Prova P1 (5) - Criando metodo getValidHexCursor (para recuperar o retorno da validacao)
+bool MenuTemplate::getValidHexCursor() {
+    //return this
+    return this->TypeCursor;
 }
 
 // Prova P1 (3) - Adicionando metodo getCursor (para que possa ser usada no main.cpp)

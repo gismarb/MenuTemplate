@@ -28,7 +28,12 @@ int main() {
     MenuA.Description = "Choose with UP and DOWN, select with RETURN!";
     
     // Prova P1 (5) - Alterando usando o metodo setCursor(para validar se é isUnicode)
-    MenuA.setCursor("\xe2\x98\xb9	", 1);
+    MenuA.setCursor("\xe2\x98\xb9	", true);
+    // Abaixo exemplos de entradas testadas
+    //MenuA.setCursor("\xe2\x99\x90	", false);
+    //MenuA.setCursor("> ", false);
+    //MenuA.setCursor(" ", false);
+    //MenuA.setCursor(">--> ", true);
 
     // Prova P1 (4) - Fazendo uso do metodo setCursorSize (definindo o tamanho da string em funcao de getCursor)
     MenuA.setCursorSize(MenuA.getCursor().length());
@@ -46,7 +51,7 @@ int main() {
 
     MenuA.swapEntries(2, "GAME_OPTIONS");
 
-    MenuA.setCursorStartPosition(2);
+    MenuA.setCursorStartPosition(0);
 
     cout << MenuA.displayGetName() << endl;
     
