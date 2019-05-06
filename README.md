@@ -166,11 +166,11 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
 
 #### Imagens do Programa, após as modificações:
 
-![1](/home/gismar/tela1.png)
+![1](./tela1.png)
 
 
 
-![2](/home/gismar/tela2.png)
+![2](./tela2.png)
 
 
 
