@@ -166,11 +166,11 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
 
 #### Imagens do Programa, após as modificações:
 
-![](/home/gismar/Asser/SI/3_Semestre/Programacao_Orientada_Objetos/MenuTemplate/tela1.png)
+![1](/home/gismar/tela1.png)
 
 
 
-![](/home/gismar/Asser/SI/3_Semestre/Programacao_Orientada_Objetos/MenuTemplate/tela2.png)
+![2](/home/gismar/tela2.png)
 
 
 
