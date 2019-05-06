@@ -137,9 +137,14 @@ private:
     //!
     int CursorStartPosition = 0;
 
-
+    //!
+    //! @brief      Check if type of data Cursor is ou is not Hexadecimal.
+    //!
+    //! Return true or false.
+    //! Initial value is null.
+    //!
+    // Prova P1 (5) - Criando atributo TypeCursor (para validar entradas hexadecimais)
     bool TypeCursor;
-
 
     //!
     //! @brief      Cursor of menu.
@@ -318,7 +323,6 @@ private:
     //!
     void swapEntries(const int &PositionA, const int &PositionB);
 
-    // Prova P1 (5) - Criando metodo setValidHexCursor (para validar entradas hexadecimais)
     //!
     //! @brief      Sets Cursor.
     //!
@@ -326,7 +330,7 @@ private:
     //!
     //! According to the activity, it checks whether or not the string represents a hexadecimal (Bool type).
     //!
-    // Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
+    // Prova P1 (5) - Criando metodo setValidHexCursor (para validar entradas hexadecimais)
     void setValidHexCursor(const string &Cursor);
 
     //!

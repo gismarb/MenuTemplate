@@ -550,7 +550,7 @@ bool MenuTemplate::getValidHexCursor() {
 }
 
 // Prova P1 (3) - Adicionando metodo getCursor (para que possa ser usada no main.cpp)
-// Este metodo esta declarado na em MenuTemplate/MenuTemplate.hpp (linha 335)
+// Este metodo esta declarado na em MenuTemplate/MenuTemplate.hpp (linha 365)
 string MenuTemplate::getCursor() {
     return this->Cursor;
 }
