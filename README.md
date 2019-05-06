@@ -9,7 +9,7 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
 1. A solução encontrada para resolver a demanda levantada pela questão 1, foi apenas adcionar mais entradas *"`addEntry`"*, conforme as entradas solicitadas (*`Video Options; Sound Options; Controls`*) no código do arquivo *"`main.cpp`"*. Segue código usado abaixo:
 
    ```c++
-   	// Prova P1 (1) - Adicionando (Video Options, Sound Options, Controls)
+   // Prova P1 (1) - Adicionando (Video Options, Sound Options, Controls)
        MenuA.addEntry("GAME_VIDEO", "Video Options");
        MenuA.addEntry("GAME_SOUND", "Sound Options");
        MenuA.addEntry("GAME_CONTROLS", "Controls");
@@ -18,7 +18,7 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
 2. Para modificar a descrição, apenas alterei  o Atributo *"`Title`"* em *"`MenuA`"* no código do arquivo *"`main.cpp`"* , conforme código abaixo:
 
    ```c++
-   	// Prova P1 (2) - Adicionando novo titulo (Neverwinter Nights Simple Menu)
+   // Prova P1 (2) - Adicionando novo titulo (Neverwinter Nights Simple Menu)
        MenuA.Title = "\n\t\tNeverwinter Nights Simple Menu";
    ```
 
@@ -29,7 +29,7 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
    `main.cpp`
 
    ```c++
-       // Prova P1 (3) - Fazendo uso metodo getCursor (mostrando qual foi o cursor 		utilizado)
+       // Prova P1 (3) - Fazendo uso metodo getCursor (mostrando qual foi o cursor utilizado)
        cout << "Cursor typed: " << MenuA.getCursor() << endl;
    ```
 
@@ -50,7 +50,7 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
    `main.cpp`
 
    ```c++
-    	// Prova P1 (4) - Fazendo uso do metodo setCursorSize (definindo o tamanho da 		string em funcao de getCursor)
+    // Prova P1 (4) - Fazendo uso do metodo setCursorSize (definindo o tamanho da string em funcao de getCursor)
        MenuA.setCursorSize(MenuA.getCursor().length());
        
        // Prova P1 (4) - Fazendo uso do metodo getCursorSize (mostrando tamanho da string)
@@ -60,7 +60,7 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
    `MenuTemplate/MenuTemplate.hpp`
 
    ```c++
-   	// Prova P1 (4) - Definindo atributo CursorSize (tipo int, pois armazenará o 		tamanho da string)
+   	// Prova P1 (4) - Definindo atributo CursorSize (tipo int, pois armazenará o tamanho da string)
    	int CursorSize;
    
    	// Prova P1 (4) - Definindo metodo (setCursorSize)
@@ -94,7 +94,7 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
    `main.cpp`
 
    ```c++
-   	// Prova P1 (5) - Alterando usando o metodo setCursor(para validar se é isUnicode)
+   // Prova P1 (5) - Alterando usando o metodo setCursor(para validar se é isUnicode)
        MenuA.setCursor("\xe2\x98\xb9	", true);
        // Abaixo exemplos de entradas testadas
        //MenuA.setCursor("\xe2\x99\x90	", false);
@@ -106,13 +106,13 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
    `MenuTemplate/MenuTemplate.hpp`
 
    ```c++
-   	// Prova P1 (5) - Criando atributo TypeCursor (para validar entradas hexadecimais)
+   // Prova P1 (5) - Criando atributo TypeCursor (para validar entradas hexadecimais)
        bool TypeCursor;
        
-   	// Prova P1 (5) - Criando metodo setValidHexCursor (para validar entradas 			hexadecimais)
+   // Prova P1 (5) - Criando metodo setValidHexCursor (para validar entradas hexadecimais)
        void setValidHexCursor(const string &Cursor);
    
-   	// Prova P1 (5) - Criando metodo getValidHexCursor (para recuperar o retorno da 	validacao)
+   // Prova P1 (5) - Criando metodo getValidHexCursor (para recuperar o retorno da validacao)
        bool getValidHexCursor();
    
        // Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
@@ -123,40 +123,40 @@ Aluno: Gismar Barbosa - POO Prova 1 - Link para respositório: *<https://github.
    `MenuTemplate/MenuTemplate.cpp`
 
    ```c++
-   	// Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
-   	void MenuTemplate::setValidHexCursor(const string &Cursor) {
-       	if((Cursor[0] == '\xe2') && ((Cursor[1] == '\x98') || (Cursor[1] == '\x99'))) 
-          		TypeCursor = true;
-       	else
-           	TypeCursor = false;
-   	}
+   // Prova P1 (5) - Alterando declaracao do metodo setCursor(para receber isUnicode)
+   void MenuTemplate::setValidHexCursor(const string &Cursor) {
+      	if((Cursor[0] == '\xe2') && ((Cursor[1] == '\x98') || (Cursor[1] == '\x99'))) 
+       	TypeCursor = true;
+       else
+          	TypeCursor = false;
+   }
    
-   	// Prova P1 (5) - Criando metodo getValidHexCursor (para recuperar o retorno da 	validacao)
-   	bool MenuTemplate::getValidHexCursor() {
-     		//return this
-       	return this->TypeCursor;
-   	}
+   // Prova P1 (5) - Criando metodo getValidHexCursor (para recuperar o retorno da 	validacao)
+   bool MenuTemplate::getValidHexCursor() {
+    	//return this
+       return this->TypeCursor;
+   }
    
-   	// Prova P1 (5) - Testando para saber se é Unicode
-       // Usando Metodo setValidHexCursor (criado para checar a entrada do hexadecimal)
-       MenuTemplate::setValidHexCursor(Cursor);
+   // Prova P1 (5) - Testando para saber se é Unicode
+   // Usando Metodo setValidHexCursor (criado para checar a entrada do hexadecimal)
+   MenuTemplate::setValidHexCursor(Cursor);
    
-       // Usando o metodo getValidHexCursor, implementamos e verificamos os restornos, 	visando tratar excecoes
-       if((isUnicode) && (MenuTemplate::getValidHexCursor()))
-       	this->Cursor = Cursor;
-   
-     	if((isUnicode) && (!MenuTemplate::getValidHexCursor()))
-     		throw string ("Option to hexadecimal set, but is not hexadecimal");
-   
-     	if((!isUnicode) && (MenuTemplate::getValidHexCursor()))
-       	throw string ("Option to hexadecimal not set, but is hexadecimal");
-           
+   // Usando o metodo getValidHexCursor, implementamos e verificamos os restornos, visando tratar excecoes
+   if((isUnicode) && (MenuTemplate::getValidHexCursor()))
        this->Cursor = Cursor;
    
-      	// Testing, if new Cursor equals old Cursor. If true: return.
-       	if(this->Cursor == Cursor)
-           	return;
-       }
+   if((isUnicode) && (!MenuTemplate::getValidHexCursor()))
+     	throw string ("Option to hexadecimal set, but is not hexadecimal");
+   
+   if((!isUnicode) && (MenuTemplate::getValidHexCursor()))
+     	throw string ("Option to hexadecimal not set, but is hexadecimal");
+           
+   this->Cursor = Cursor;
+   
+   // Testing, if new Cursor equals old Cursor. If true: return.
+    	if(this->Cursor == Cursor)
+         	return;
+   }
       
    ```
 
